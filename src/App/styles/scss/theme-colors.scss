@@ -1,0 +1,30 @@
+// ~~~~~~ COLORS ~~~~~~
+// ~~basic
+$black: #000;
+$white: #fff;
+$red: red;
+$green: green;
+$blue: blue;
+
+// ~~font colors
+$font_default: #fff;
+$fontBlack: $black;
+$fontWhite: $white;
+$fontRed: $red;
+$fontGreen: $green;
+$fontBlue: $blue;
+
+$fontColors: (
+	fontDefault: $font_default,
+	fontBlack: $fontBlack,
+	fontWhite: $white,
+	fontRed: $red,
+	fontGreen: $green,
+	fontBlue: $blue,
+);
+
+// ~~~~~~ FUNCTIONS ~~~~~~
+// ~~font colors
+@function font-colors($key) {
+	@return map-get($fontColors, $key);
+}
