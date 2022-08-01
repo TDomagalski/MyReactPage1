@@ -1,8 +1,11 @@
+import React from "react";
+import { Navbar } from "../components/Navbar/index";
+
 export const App = () => {
 	return (
 		<div className="App">
-			<h1>Hello World !!!</h1>
-			<a href="#">czytaj dalej</a>
+			<Navbar />
+			<h1>Page</h1>
 		</div>
 	);
 };

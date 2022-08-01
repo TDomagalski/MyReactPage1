@@ -3,7 +3,9 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
+  width: 100%;
   color-scheme: light dark;
+  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,9 +14,7 @@
 }
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -34,9 +34,8 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 1.5em;
   line-height: 1.1;
-  color: #000;
 }
 
 button {
@@ -56,4 +55,96 @@ button:hover {
 }
 button:focus, button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #646cff;
+  background-color: #1a1a1a;
+}
+nav .navbar {
+  width: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .navbar .logo img {
+  width: 50px;
+  height: 50px;
+}
+nav .navbar .hamburger {
+  display: block;
+}
+nav .nav_menu {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+nav .nav_menu li {
+  margin-bottom: 2rem;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  nav {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav .navbar .hamburger {
+    display: none;
+  }
+  nav .nav_menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 15px;
+  }
+  nav .nav_menu li {
+    margin: 0;
+    display: block;
+  }
 }/*# sourceMappingURL=App.css.map */

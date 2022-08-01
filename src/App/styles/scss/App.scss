@@ -1,13 +1,15 @@
 @import "theme-colors.scss";
+@import "media-queries.scss";
 
 :root {
 	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: 400;
+	width: 100%;
 
 	color-scheme: light dark;
-	// background-color: #242424;
+	background-color: #242424;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -17,22 +19,9 @@
 }
 
 #root {
-	max-width: 1280px;
 	margin: 0 auto;
-	padding: 2rem;
 	text-align: center;
 }
-
-// .logo:hover {
-//   filter: drop-shadow(0 0 2em #646cffaa);
-// }
-// .logo.react:hover {
-//   filter: drop-shadow(0 0 2em #61dafbaa);
-// }
-
-// .logo {
-//   will-change: filter;
-// }
 
 a {
 	font-weight: 500;
@@ -46,16 +35,13 @@ a {
 
 body {
 	margin: 0;
-	// display: flex;
-	// place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
 }
 
 h1 {
-	font-size: 3.2em;
+	font-size: 1.5em;
 	line-height: 1.1;
-	color: font-colors(fontBlack);
 }
 
 button {
@@ -76,5 +62,82 @@ button {
 	&:focus,
 	&:focus-visible {
 		outline: 4px auto -webkit-focus-ring-color;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	padding: 0 1rem;
+}
+
+// ~~~~~~ NAVIGATION ~~~~~~
+nav {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid themeColors(borderDefault);
+	background-color: #1a1a1a;
+
+	.navbar {
+		width: 100%;
+		padding: 15px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		.hamburger {
+			display: block;
+		}
+	}
+
+	.nav_menu {
+		width: 100%;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+
+		li {
+			margin-bottom: 2rem;
+			display: block;
+		}
+	}
+}
+
+// ~~~~~~ MEDIA QUERIES ~~~~~~
+@media (min-width: $break-medium) {
+	nav {
+		width: 100%;
+		flex-direction: row;
+
+		.navbar {
+			.hamburger {
+				display: none;
+			}
+		}
+
+		.nav_menu {
+			flex-direction: row;
+			justify-content: space-between;
+			padding-right: 15px;
+
+			li {
+				margin: 0;
+				display: block;
+			}
+		}
 	}
 }

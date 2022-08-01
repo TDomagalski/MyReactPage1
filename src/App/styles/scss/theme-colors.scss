@@ -14,17 +14,22 @@ $fontRed: $red;
 $fontGreen: $green;
 $fontBlue: $blue;
 
-$fontColors: (
+//~~borders colors
+$borderDefault: #646cff;
+
+$theme-colors: (
+	//~~fonts
 	fontDefault: $font_default,
 	fontBlack: $fontBlack,
 	fontWhite: $white,
 	fontRed: $red,
 	fontGreen: $green,
 	fontBlue: $blue,
+	borderDefault: $borderDefault
 );
 
 // ~~~~~~ FUNCTIONS ~~~~~~
 // ~~font colors
-@function font-colors($key) {
-	@return map-get($fontColors, $key);
+@function themeColors($key) {
+	@return map-get($theme-colors, $key);
 }
