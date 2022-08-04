@@ -25,7 +25,7 @@ export const Navbar: React.FC<hamProps> = () => {
 					Ham
 				</button>
 			</div>
-			<ul className={hamburger}>
+			<ul className={hamburger ? "nav_menu open" : "nav_menu"}>
 				<li>Home</li>
 				<li>Info</li>
 				<li>Gallery</li>
