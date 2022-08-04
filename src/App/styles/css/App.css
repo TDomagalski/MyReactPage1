@@ -81,6 +81,8 @@ nav {
           align-items: center;
   border-bottom: 1px solid #646cff;
   background-color: #1a1a1a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 nav .navbar {
   width: 100%;
@@ -109,6 +111,9 @@ nav .nav_menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: none;
+}
+nav .nav_menu.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,11 +134,25 @@ nav .nav_menu li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  nav .navbar {
+    width: auto;
+    padding: 0;
+  }
+  nav .navbar .logo {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   nav .navbar .hamburger {
     display: none;
   }
   nav .nav_menu {
+    width: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -141,10 +160,12 @@ nav .nav_menu li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-right: 15px;
   }
   nav .nav_menu li {
-    margin: 0;
-    display: block;
+    margin-left: 2rem;
+    margin-bottom: 0;
+  }
+  nav .nav_menu li:first-of-type {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=App.css.map */

@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../img/Logo.svg";
 
-export const Navbar: React.FC = () => {
+interface hamProps {
+	hamburger?: boolean | null;
+	setHamburger: void;
+}
+
+export const Navbar: React.FC<hamProps> = () => {
+	const [hamburger, setHamburger] = useState(false);
+
+	const handleHamburger = () => {
+		console.log(hamburger);
+
+		setHamburger(!hamburger);
+	};
+
 	return (
 		<nav>
 			<div className="navbar">
 				<a href="#" className="logo">
 					<img src={Logo} alt="Logo" />
 				</a>
-				<a href="#" className="hamburger">
+				<button onClick={handleHamburger} className="hamburger">
 					Ham
-				</a>
+				</button>
 			</div>
-			<ul className="nav_menu">
+			<ul className={hamburger}>
 				<li>Home</li>
 				<li>Info</li>
 				<li>Gallery</li>

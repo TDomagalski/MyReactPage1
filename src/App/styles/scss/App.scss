@@ -81,6 +81,7 @@ nav {
 	align-items: center;
 	border-bottom: 1px solid themeColors(borderDefault);
 	background-color: #1a1a1a;
+	box-sizing: border-box;
 
 	.navbar {
 		width: 100%;
@@ -107,8 +108,12 @@ nav {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
-		display: flex;
-		flex-direction: column;
+		display: none;
+
+		&.open {
+			display: flex;
+			flex-direction: column;
+		}
 
 		li {
 			margin-bottom: 2rem;
@@ -122,21 +127,34 @@ nav {
 	nav {
 		width: 100%;
 		flex-direction: row;
+		padding: 15px;
+		flex: 1;
 
 		.navbar {
+			width: auto;
+			padding: 0;
+
+			.logo {
+				flex-grow: 1;
+			}
+
 			.hamburger {
 				display: none;
 			}
 		}
 
 		.nav_menu {
+			width: auto;
 			flex-direction: row;
 			justify-content: space-between;
-			padding-right: 15px;
 
 			li {
-				margin: 0;
-				display: block;
+				margin-left: 2rem;
+				margin-bottom: 0;
+
+				&:first-of-type {
+					margin-left: 0;
+				}
 			}
 		}
 	}
