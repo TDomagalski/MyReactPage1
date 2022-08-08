@@ -30,7 +30,6 @@ a:hover {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -71,6 +70,63 @@ button:focus {
   max-width: 1280px;
   margin: auto;
   padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bar_info {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bar_info .bar_contact {
+  margin-bottom: 20px;
+}
+.bar_info .bar_contact .phone_number,
+.bar_info .bar_contact .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bar_info .bar_contact .phone_number a,
+.bar_info .bar_contact .email a {
+  margin-left: 10px;
+  color: #fff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.bar_info .bar_contact .phone_number a:hover,
+.bar_info .bar_contact .email a:hover {
+  color: #646cff;
+}
+.bar_info .bar_contact .phone_number {
+  margin-bottom: 10px;
+}
+.bar_info .social_media .facebook a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.bar_info .social_media .facebook a svg {
+  width: 40px;
+  height: 40px;
 }
 
 nav {
@@ -134,6 +190,58 @@ nav .nav_menu li {
 }
 
 @media (min-width: 992px) {
+  .bar_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bar_info .bar_contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+  .bar_info .bar_contact .phone_number,
+.bar_info .bar_contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bar_info .bar_contact .phone_number a,
+.bar_info .bar_contact .email a {
+    margin-left: 5px;
+    color: #fff;
+  }
+  .bar_info .bar_contact .phone_number {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
   nav {
     width: 100%;
     -webkit-box-orient: horizontal;

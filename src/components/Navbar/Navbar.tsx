@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Logo from "../../img/Logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 
-interface hamProps {
-	hamburger: boolean | null;
+type hamProps = {
+	hamburger: boolean;
 	setHamburger: void;
-}
+};
 
-export const Navbar: React.FC<hamProps> = () => {
-	const [hamburger, setHamburger] = useState(false);
+export const Navbar = () => {
+	const [hamburger, setHamburger] = useState<hamProps | boolean>(false);
 
 	const handleHamburger = () => {
 		setHamburger(!hamburger);
