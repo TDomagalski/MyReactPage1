@@ -22,7 +22,10 @@ export const InfoBar = (props: BarInfoProps) => {
 			</div>
 			<div className="social_media">
 				<div className="facebook">
-					<a href="#">
+					<a
+						href="https://www.facebook.com/"
+						target="_blank"
+						rel="noopener noreferrer">
 						<FacebookIcon />
 					</a>
 				</div>

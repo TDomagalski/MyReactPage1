@@ -18,6 +18,9 @@ $fontHoverLink: #646cff;
 //~~borders colors
 $borderDefault: #646cff;
 
+// ~~btn colors
+$btnBgDefault: #1ab00b;
+
 $theme-colors: (
 	//~~fonts
 	fontDefault: $font_default,
@@ -26,7 +29,9 @@ $theme-colors: (
 	fontRed: $red,
 	fontGreen: $green,
 	fontBlue: $blue,
-	borderDefault: $borderDefault
+	borderDefault: $borderDefault,
+	fontHoverLink: $fontHoverLink,
+	btnBgDefault: $btnBgDefault
 );
 
 // ~~~~~~ FUNCTIONS ~~~~~~
