@@ -1,0 +1,1 @@
+export { FrontRooms } from "./FrontRooms";
