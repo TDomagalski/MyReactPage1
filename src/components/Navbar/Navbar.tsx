@@ -19,6 +19,7 @@ export const Navbar = () => {
 			<div className="navbar">
 				<a href="#" className="logo">
 					<img src={Logo} alt="Logo" />
+					<span>TomiDom</span>
 				</a>
 				<button onClick={handleHamburger} className="hamburger">
 					<MenuIcon />

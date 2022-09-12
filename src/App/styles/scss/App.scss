@@ -95,7 +95,7 @@ button {
 		.phone_number,
 		.email {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-end;
 			align-items: center;
 
 			a {
@@ -115,6 +115,10 @@ button {
 	}
 
 	.social_media {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
 		.facebook {
 			a {
 				display: flex;
@@ -147,6 +151,9 @@ nav {
 		align-items: center;
 
 		.logo {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
 			img {
 				width: 50px;
 				height: 50px;
@@ -261,8 +268,14 @@ nav {
 			}
 		}
 
-		// .social_media {
-		// }
+		.social_media {
+			justify-content: flex-end;
+			.facebook,
+			.twitter,
+			.yt {
+				margin-left: 1rem;
+			}
+		}
 	}
 
 	// ~~~~~~ NAVIGATION ~~~~~~

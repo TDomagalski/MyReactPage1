@@ -106,9 +106,9 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -126,6 +126,17 @@ button:focus {
 }
 .bar_info .bar_contact .phone_number {
   margin-bottom: 10px;
+}
+.bar_info .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 .bar_info .social_media .facebook a {
   display: -webkit-box;
@@ -168,6 +179,17 @@ nav .navbar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -318,6 +340,16 @@ nav .nav_menu li {
   .bar_info .bar_contact .phone_number {
     margin-bottom: 0;
     margin-right: 30px;
+  }
+  .bar_info .social_media {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .bar_info .social_media .facebook,
+.bar_info .social_media .twitter,
+.bar_info .social_media .yt {
+    margin-left: 1rem;
   }
   nav {
     width: 100%;
