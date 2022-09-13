@@ -1,6 +1,7 @@
 import { Navbar } from "../components/Navbar/index";
 import { InfoBar } from "../components/InfoBar/index";
 import { FrontRooms } from "../components/FrontRooms";
+import { Gallery } from "../components/Gallery";
 import houseImg from "../img/house.png";
 import HotelIcon from "@mui/icons-material/Hotel";
 import ShowerIcon from "@mui/icons-material/Shower";
@@ -19,7 +20,7 @@ export const App = () => {
 						<img src={houseImg} alt="house" />
 					</div>
 					<div className="right_about">
-						<h2>TomiDom Worker rooms</h2>
+						<h1>TomiDom Worker rooms</h1>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 							assumenda temporibus, sunt non enim quo veniam ipsa nisi. Lorem
@@ -55,6 +56,7 @@ export const App = () => {
 			</div>
 
 			<FrontRooms />
+			<Gallery />
 		</div>
 	);
 };
