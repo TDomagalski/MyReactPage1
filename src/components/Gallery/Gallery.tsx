@@ -1,7 +1,7 @@
 export const Gallery = () => {
 	return (
 		<div className="container">
-			<h2>Gallery</h2>
+			<h2 className="title">Gallery</h2>
 			<div className="front_gallery">
 				<div className="foto1"></div>
 				<div className="foto2"></div>

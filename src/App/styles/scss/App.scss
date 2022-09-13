@@ -40,13 +40,18 @@ body {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 3rem;
 	line-height: 1.1;
 }
 
 h2 {
-	font-size: 1.5em;
-	margin: 5rem auto 2.5rem auto;
+	font-size: 2.2rem;
+	&.title {
+		margin: 5rem auto 2.5rem auto;
+	}
+	&.front_counter-num {
+		font-size: 2.5rem;
+	}
 }
 
 button {
@@ -56,7 +61,7 @@ button {
 	border-radius: 8px;
 	border: 1px solid transparent;
 	padding: 0.6em;
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 500;
 	font-family: inherit;
 	background-color: #1a1a1a;
@@ -293,7 +298,7 @@ nav {
 	}
 }
 
-// ~~~~~~ GALLERY ~~~~~~
+// ~~~~~~ front gallery ~~~~~~
 .front_gallery {
 	width: 100%;
 	height: 400px;
@@ -347,7 +352,38 @@ nav {
 	}
 }
 
-// ~~~~~~ MEDIA QUERIES ~~~~~~
+// ~~~~~~ front counter ~~~~~~
+.front_counter {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 100px 0;
+	background-color: themeColors(bgFrontCounter);
+
+	.counter {
+		flex-basis: 100%;
+		padding: 1rem;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: center;
+		font-weight: 700;
+
+		span {
+			font-size: 2.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+			flex-grow: 1;
+			letter-spacing: 2.5px;
+		}
+	}
+}
+
+// ~~~!!~~~ MEDIA QUERIES ~~~!!~~~
 @media (min-width: $break-medium) {
 	.container {
 		width: 100%;
@@ -505,6 +541,16 @@ nav {
 	.front_gallery {
 		* {
 			flex-basis: calc(25% - 4px);
+		}
+	}
+
+	// ~~ front counter
+	.front_counter {
+		.counter {
+			flex-basis: 25%;
+
+			// span {}
+			// p {}
 		}
 	}
 }

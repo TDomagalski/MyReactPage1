@@ -9,7 +9,7 @@ import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 export const FrontRooms = () => {
 	return (
 		<div className="container">
-			<h2>Our Rooms</h2>
+			<h2 className="title">Our Rooms</h2>
 			<div className="front_rooms">
 				<div className="room">
 					<img src={ImageRoom1} alt="Room1" />

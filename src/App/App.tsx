@@ -2,6 +2,7 @@ import { Navbar } from "../components/Navbar/index";
 import { InfoBar } from "../components/InfoBar/index";
 import { FrontRooms } from "../components/FrontRooms";
 import { Gallery } from "../components/Gallery";
+import { FrontCounter } from "../components/FrontCounter";
 import houseImg from "../img/house.png";
 import HotelIcon from "@mui/icons-material/Hotel";
 import ShowerIcon from "@mui/icons-material/Shower";
@@ -57,6 +58,7 @@ export const App = () => {
 
 			<FrontRooms />
 			<Gallery />
+			<FrontCounter />
 		</div>
 	);
 };
