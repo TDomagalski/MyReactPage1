@@ -355,30 +355,32 @@ nav {
 // ~~~~~~ front counter ~~~~~~
 .front_counter {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 100px 0;
 	background-color: themeColors(bgFrontCounter);
 
-	.counter {
-		flex-basis: 100%;
-		padding: 1rem;
-		box-sizing: border-box;
+	.container {
 		display: flex;
-		flex-direction: column;
-		justify-content: stretch;
-		align-items: center;
-		font-weight: 700;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 100px 0;
+		.counter {
+			flex-basis: 100%;
+			padding: 1rem;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: stretch;
+			align-items: center;
+			font-weight: 700;
 
-		span {
-			font-size: 2.5rem;
-		}
+			span {
+				font-size: 2.5rem;
+			}
 
-		p {
-			font-size: 1.5rem;
-			flex-grow: 1;
-			letter-spacing: 2.5px;
+			p {
+				font-size: 1.5rem;
+				flex-grow: 1;
+				letter-spacing: 2.5px;
+			}
 		}
 	}
 }
@@ -546,11 +548,15 @@ nav {
 
 	// ~~ front counter
 	.front_counter {
-		.counter {
-			flex-basis: 25%;
+		margin: auto;
 
-			// span {}
-			// p {}
+		.container {
+			.counter {
+				flex-basis: 25%;
+
+				// span {}
+				// p {}
+			}
 		}
 	}
 }

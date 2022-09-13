@@ -431,6 +431,9 @@ nav .nav_menu li {
 
 .front_counter {
   width: 100%;
+  background-color: rgba(2, 32, 204, 0.8);
+}
+.front_counter .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,9 +443,8 @@ nav .nav_menu li {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 100px 0;
-  background-color: rgba(1, 23, 148, 0.7333333333);
 }
-.front_counter .counter {
+.front_counter .container .counter {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding: 1rem;
@@ -463,10 +465,10 @@ nav .nav_menu li {
           align-items: center;
   font-weight: 700;
 }
-.front_counter .counter span {
+.front_counter .container .counter span {
   font-size: 2.5rem;
 }
-.front_counter .counter p {
+.front_counter .container .counter p {
   font-size: 1.5rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -679,7 +681,10 @@ nav .nav_menu li {
     -ms-flex-preferred-size: calc(25% - 4px);
         flex-basis: calc(25% - 4px);
   }
-  .front_counter .counter {
+  .front_counter {
+    margin: auto;
+  }
+  .front_counter .container .counter {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
   }
