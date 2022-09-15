@@ -1,7 +1,6 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 20px;
-  line-height: 24px;
   letter-spacing: 1.3px;
   font-weight: 400;
   width: 100%;
@@ -92,7 +91,11 @@ button:focus {
 .btn_details.small {
   width: 50%;
   margin: auto;
-  padding: 10px 20px;
+  padding: 15px 20px;
+}
+.btn_details:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 .container {
@@ -128,6 +131,7 @@ button:focus {
           align-items: center;
 }
 .bar_info .bar_contact {
+  width: 100%;
   margin-bottom: 20px;
 }
 .bar_info .bar_contact .phone_number,
@@ -144,7 +148,7 @@ button:focus {
 }
 .bar_info .bar_contact .phone_number a,
 .bar_info .bar_contact .email a {
-  margin-left: 10px;
+  margin-left: 0.5rem;
   color: #fff;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -155,6 +159,9 @@ button:focus {
 }
 .bar_info .bar_contact .phone_number {
   margin-bottom: 10px;
+}
+.bar_info .bar_contact .email {
+  font-size: 0.8rem;
 }
 .bar_info .social_media {
   display: -webkit-box;
@@ -297,7 +304,8 @@ nav .nav_menu li {
   height: 2em;
 }
 
-.front_rooms {
+.front_rooms,
+.front_rooms-free {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +322,8 @@ nav .nav_menu li {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
-.front_rooms .room {
+.front_rooms .room,
+.front_rooms-free .room {
   margin: 2rem auto;
   border: 1px solid #646cff;
   border-radius: 10px;
@@ -322,15 +331,22 @@ nav .nav_menu li {
   -webkit-box-shadow: 0px 5px 24px -12px rgb(255, 255, 255);
           box-shadow: 0px 5px 24px -12px rgb(255, 255, 255);
 }
-.front_rooms .room img {
+.front_rooms .room:first-of-type,
+.front_rooms-free .room:first-of-type {
+  margin: 0 auto 2rem auto;
+}
+.front_rooms .room img,
+.front_rooms-free .room img {
   display: block;
   margin: auto;
   width: 100%;
 }
-.front_rooms .room .room_info {
+.front_rooms .room .room_info,
+.front_rooms-free .room .room_info {
   padding: 0 1rem 1rem 1rem;
 }
-.front_rooms .room .room_info .room_infoIcons {
+.front_rooms .room .room_info .room_infoIcons,
+.front_rooms-free .room .room_info .room_infoIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,7 +360,8 @@ nav .nav_menu li {
       flex-wrap: wrap;
   width: 100%;
 }
-.front_rooms .room .room_info .room_infoIcons .rooms_infoIcon {
+.front_rooms .room .room_info .room_infoIcons .rooms_infoIcon,
+.front_rooms-free .room .room_info .room_infoIcons .rooms_infoIcon {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   display: -webkit-box;
@@ -362,11 +379,13 @@ nav .nav_menu li {
           align-items: center;
   padding: 1rem 0;
 }
-.front_rooms .room .room_info .room_infoIcons .rooms_infoIcon svg {
+.front_rooms .room .room_info .room_infoIcons .rooms_infoIcon svg,
+.front_rooms-free .room .room_info .room_infoIcons .rooms_infoIcon svg {
   width: 2.5rem;
   height: 2.5rem;
 }
-.front_rooms .room .room_info .room_infoIcons .rooms_infoIcon p {
+.front_rooms .room .room_info .room_infoIcons .rooms_infoIcon p,
+.front_rooms-free .room .room_info .room_infoIcons .rooms_infoIcon p {
   font-weight: 700;
 }
 
@@ -431,7 +450,7 @@ nav .nav_menu li {
 
 .front_counter {
   width: 100%;
-  background-color: rgba(2, 32, 204, 0.8);
+  background-color: #0d9900;
 }
 .front_counter .container {
   display: -webkit-box;
@@ -476,10 +495,154 @@ nav .nav_menu li {
   letter-spacing: 2.5px;
 }
 
+footer {
+  border-top: 1px solid #646cff;
+}
+footer .container.footer {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .container.footer .footer_info {
+  padding: 1rem;
+}
+footer .container.footer .footer_info .footer_info-about {
+  margin-bottom: 2rem;
+}
+footer .container.footer .footer_info .footer_info-about h3 {
+  margin-top: 0;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_location, footer .container.footer .footer_info .footer_info-details > div.footer_phoneNumber, footer .container.footer .footer_info .footer_info-details > div.footer_email {
+  padding: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_location a, footer .container.footer .footer_info .footer_info-details > div.footer_phoneNumber a, footer .container.footer .footer_info .footer_info-details > div.footer_email a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_location a svg, footer .container.footer .footer_info .footer_info-details > div.footer_phoneNumber a svg, footer .container.footer .footer_info .footer_info-details > div.footer_email a svg {
+  width: 2rem;
+  height: 2rem;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_location a span, footer .container.footer .footer_info .footer_info-details > div.footer_phoneNumber a span, footer .container.footer .footer_info .footer_info-details > div.footer_email a span {
+  margin-left: 5px;
+  font-size: 0.7rem;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_socialmedia {
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_socialmedia h3 {
+  margin: 1rem 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_socialmedia > div a {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .container.footer .footer_info .footer_info-details > div.footer_socialmedia > div a svg {
+  width: 3rem;
+  height: 3rem;
+}
+footer .container.footer .footer_map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .container.footer .footer_map img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+footer .container .footer_condition {
+  margin: 0.5rem;
+  font-size: 0.5rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .container .footer_condition .footer_condition-company h6 {
+  margin: 0;
+}
+footer .container .footer_condition .footer_condition-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+footer .container .footer_condition .footer_condition-details a {
+  margin-bottom: 5px;
+}
+footer .container .footer_condition .footer_condition-details a:last-of-type {
+  margin-bottom: 0;
+}
+
 @media (min-width: 992px) {
   .container {
     width: 100%;
-    max-width: 2000px;
+    max-width: 3000px;
     padding: 0 1rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -614,15 +777,19 @@ nav .nav_menu li {
     width: auto;
     padding: 20px 40px;
   }
-  .front_rooms {
+  .front_rooms,
+.front_rooms-free {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .front_rooms .room {
+  .front_rooms .room,
+.front_rooms-free .room {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     display: -webkit-box;
@@ -638,13 +805,16 @@ nav .nav_menu li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0 auto 2rem auto;
   }
-  .front_rooms .room img {
+  .front_rooms .room img,
+.front_rooms-free .room img {
     display: block;
     margin: auto;
     width: 100%;
   }
-  .front_rooms .room .room_info {
+  .front_rooms .room .room_info,
+.front_rooms-free .room .room_info {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -662,18 +832,21 @@ nav .nav_menu li {
         -ms-flex-align: center;
             align-items: center;
   }
-  .front_rooms .room .room_info p {
+  .front_rooms .room .room_info p,
+.front_rooms-free .room .room_info p {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     text-align: justify;
   }
-  .front_rooms .room .room_info .room_infoIcons {
+  .front_rooms .room .room_info .room_infoIcons,
+.front_rooms-free .room .room_info .room_infoIcons {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .front_rooms .room .room_info .room_infoIcons .rooms_infoIcon {
+  .front_rooms .room .room_info .room_infoIcons .rooms_infoIcon,
+.front_rooms-free .room .room_info .room_infoIcons .rooms_infoIcon {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
   }
@@ -687,5 +860,70 @@ nav .nav_menu li {
   .front_counter .container .counter {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
+  }
+  footer .container.footer {
+    width: 100%;
+    max-width: 3000px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  footer .container.footer .footer_info {
+    padding: 0 1rem;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  footer .container.footer .footer_info .footer_info-details > div.footer_location a span, footer .container.footer .footer_info .footer_info-details > div.footer_phoneNumber a span, footer .container.footer .footer_info .footer_info-details > div.footer_email a span {
+    font-size: 1rem;
+  }
+  footer .container.footer .footer_map {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  footer .container.footer .footer_condition {
+    margin: 0.5rem;
+    font-size: 0.5rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .container.footer .footer_condition .footer_condition-company h6 {
+    margin: 0;
+  }
+  footer .container.footer .footer_condition .footer_condition-details {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .container.footer .footer_condition .footer_condition-details a {
+    margin-bottom: 0;
+    padding-left: 0.5rem;
+    margin-left: 1rem;
+    border-left: 1px solid #646cff;
+  }
+  footer .container.footer .footer_condition .footer_condition-details a:first-of-type {
+    border-left: none;
   }
 }/*# sourceMappingURL=App.css.map */

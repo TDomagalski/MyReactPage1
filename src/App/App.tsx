@@ -3,7 +3,9 @@ import { InfoBar } from "../components/InfoBar/index";
 import { FrontRooms } from "../components/FrontRooms";
 import { Gallery } from "../components/Gallery";
 import { FrontCounter } from "../components/FrontCounter";
-import houseImg from "../img/house.png";
+import { FreeRooms } from "../components/FreeRooms";
+import { Footer } from "../components/Footer";
+import houseImg from "../img/house.webp";
 import HotelIcon from "@mui/icons-material/Hotel";
 import ShowerIcon from "@mui/icons-material/Shower";
 import LocalParkingIcon from "@mui/icons-material/LocalParking";
@@ -59,6 +61,8 @@ export const App = () => {
 			<FrontRooms />
 			<Gallery />
 			<FrontCounter />
+			<FreeRooms />
+			<Footer />
 		</div>
 	);
 };
