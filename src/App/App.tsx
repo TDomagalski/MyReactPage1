@@ -60,7 +60,12 @@ export const App = () => {
 
 			<FrontRooms />
 			<Gallery />
-			<FrontCounter />
+			<FrontCounter
+				maxRangeYears={2}
+				maxRangeArea={100}
+				maxRangeRooms={10}
+				maxRangeVisitors={245}
+			/>
 			<FreeRooms />
 			<Footer />
 		</div>
