@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../img/Logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -26,10 +27,15 @@ export const Navbar = () => {
 				</button>
 			</div>
 			<ul className={hamburger ? "nav_menu open" : "nav_menu"}>
-				<li>Home</li>
-				<li>Info</li>
-				<li>Gallery</li>
-				<li>Contact</li>
+				<li>
+					<Link to="/home">Home</Link>
+				</li>
+				<li>
+					<Link to="/about">About</Link>
+				</li>
+				<li>
+					<Link to="/contact">Contact</Link>
+				</li>
 			</ul>
 		</nav>
 	);
